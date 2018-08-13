@@ -1,0 +1,237 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Devon Crawford</title>
+
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<link rel="icon" href="../images/favicon.png">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="../includes/bootstrap.min.css">
+
+
+<!-- Custom spacing and fonts that are often reused -->
+<link rel="stylesheet" href="../css/spacing.css" type="text/css">
+<link rel="stylesheet" href="../css/fonts.css" type="text/css">
+<link rel="stylesheet" href="../css/main.css" type="text/css">
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="../includes/popper.min.js"></script>
+<script src="../includes/jquery.min.js"></script>
+<script src="../includes/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <link rel="stylesheet" type="text/css" href="../css/nav.css"/>
+<nav class="navbar fixed-top navbar-expand-lg toggle-height" id="global-nav">
+     <div class="container">
+    <a class="navbar-brand scrollN" href="../index.html">Devon Crawford</a>
+    <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon custom-toggler"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li> <a class="nav-link scrollN" href="../software.1.html">Software</a></li>
+        <li> <a class="nav-link scrollN" href="../electronics.1.html">Electronics</a></li>
+        <li><a class="nav-link scrollN" href="../films.html">Films</a></li>
+        <li><a class="nav-link scrollN" href="../photography.html">Photography</a></li>
+      </ul>
+      <ul class="navbar-nav">
+          <li><a class="nav-link scrollN" href="../contact.html">Contact</a></li>
+      </ul>
+    </div>
+     </div>
+ </nav>
+ <script type="text/javascript" src="../scripts/nav.js"></script>
+
+ <!-- Testing random additions for github in atom -->
+        <link rel="stylesheet" href="pathfinding/css/page.css">
+
+        <div class="homeImg">
+            <div class="homeDiv center">
+                    <h1 class="titleMain cenX"><span class="backW">A* PATHFINDING VISUALIZATION</span></h1>
+                    <h3 class="regTitle cenX"><span class="backW">Java and C</span></h3>
+            </div>
+
+            <div class="cenX padB60 homeSouth">
+                <a class="btn btn-primary btn-lg" href="pathfinding/releases/APathfinding-Visual.jar" role="button" download>Download .jar</a>
+                <a class="linkGrey" id="srcCode" href="https://github.com/DevonCrawford/A-Pathfinding-Visualization">View source code</a>
+            </div>
+        </div>
+
+        <div class="container-fluid backDark sec">
+            <div class="container">
+                <h3 class="subTitle white">IDEA</h3>
+                <p class="subText white extPad">I made this visualization to show
+                    the beauty of pathfinding. You can modify all major features
+                    of my algorithm through the graphics interface. Create maps
+                    in the grid easily and test the efficiency of the algorithm
+                    on the fly. Try it in diagonal mode, or non diagonal, variable
+                    speed, show steps or timed efficiency. If you zoom far enough
+                    on the mouse wheel you can view all calculations as they occur
+                    for "F cost" (top left), "G cost" (bottom left) and "H cost" (bottom right).</p>
+            </div>
+        </div>
+
+        <div class="container-fluid sec">
+            <div class="container">
+                <h3 class="subTitle">BASIC CONTROLS</h3>
+                <p class="subP">You must create a map to start the pathfinding. The start node is
+                    blue, end node is red and the walls are black.<br/><br/>To create nodes:</p>
+
+                    <ul class="listPad minpadY">
+                        <li>Start: hold 's' + left click</li>
+                        <li>End: hold 'e' + left click</li>
+                        <li>Wall: left click</li>
+                    </ul>
+                    <p class="subP">To delete nodes:</p>
+                    <ul class="listPad minpadY">
+                        <li>Same as creation, except right click!</li>
+                    </ul>
+            </div>
+
+            <div class="container">
+                <h3 class="subTitle">DIAGONAL</h3>
+                <p class="subP">My algorithm supports borth diagonal and non-diagonal pathfinding.<br/><br/>
+                    Simply check the "diagonal" box in the control panel (bottom left of the screen).</p>
+                    <img src="pathfinding/images/diagonal.gif" width="90%" class="centerImg padB40"></img>
+            </div>
+
+            <div class="container">
+                <h3 class="subTitle">VARIABLE SPEED</h3>
+                <p class="subP">You may change the speed of the visualization during runtime.</p>
+                <ul class="listPad minpadY">
+                    <li>By default, speed is 50%</li>
+                </ul>
+                <p class="subP">Notice: speed control only works when <code>showSteps</code> is true.
+                                <br/>If <code>showSteps</code> is false, that leads to the next section..</p>
+            </div>
+
+            <div class="container">
+                <h3 class="subTitle">TIMED EFFICIENCY</h3>
+                <p class="subP">You may choose to view a step-by-step process of the algorithm by selecting <code>showSteps</code> box at the bottom left.</p>
+                <ul class="listPad minpadY">
+                    <li>If showSteps is false, the algorithm will skip visuals until the end, and process as fast as possible.</li>
+                </ul>
+                <p class="subP">Also known as <code>Timed Efficiency</code>. This is useful when you want to analyze the efficiency of the algorithm in various
+                     conditions, map sizes and so on. The example below shows <code>showSteps</code> as false, where it times the algorithm and outputs <code>Completed in 4ms</code>
+                     at the bottom left.</p>
+                <img src="pathfinding/images/timed.gif" width="90%" class="centerImg padY40"></img>
+            </div>
+
+            <div class="container">
+                <h3 class="subTitle">ADVANCED</h3>
+                <p class="subP">Those are the basics! Now you can be free to make the map as complicated as you desire. (Not really, because making the map too large will overflow the stack).</p>
+
+                <img src="pathfinding/images/advanced.gif" width="90%" class="centerImg padY40"></img>
+            </div>
+
+            <div class="container">
+                <h3 class="subTitle">ZOOM</h3>
+                <p class="subP">You can (kind of) zoom with the scroll wheel. I wouldn't really advise it.
+                     It does not zoom into your mouse, only towards the top left corner, and
+                     making the map too big will crash the program. This needs some work.
+                     However, If you zoom in far enough you can view each nodes information.
+                     The top left is the "F cost", bottom left is "G cost" and bottom right
+                     is "H cost". I will work on properly implementing a zoom feature soon.</p>
+            </div>
+
+            <div class="container">
+                <h3 class="subTitle">COMMAND LINE (C)</h3>
+                <p class="subP">*Calling all low-level devs*. I recreated my A* pathfinding algorithm in C!
+                    Instead of a graphics interface this is meant to run on the command line and
+                    analyze a maze given by a .txt file. '#' characters are walls, 'O' characters
+                    are open, 'S' is the start and 'G' is the end. Visit the <a href="pathfinding.html#">github page</a> for details
+                    on how to run, and obtain the executables.</p>
+                <img src="pathfinding/images/c.PNG" width="90%" class="centerImg padY40"></img>
+            </div>
+        </div>
+
+        <div class="container-fluid btnLinks extPad">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 bot">
+                        <div class="leftCenter">
+                            <h3 class="sub2">FOUND A BUG?</h3>
+                            <p class="subText">Let me know on github</p>
+                            <a class="btn btn-success btn-lg w100" href="https://github.com/DevonCrawford/A-Pathfinding-Visualization/issues" role="button">Issues</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 bot">
+                        <div class="leftCenter">
+                            <h3 class="sub2">CONTRIBUTE</h3>
+                            <p class="subText">Take part in the project</p>
+                            <a class="btn btn-secondary btn-lg w100" href="../contact.html" role="button">Contact Me</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="leftCenter">
+                            <h3 class="sub2">GET FOR FREE</h3>
+                            <p class="subText">No install necessary</p>
+                            <a class="btn btn-primary btn-lg w100" href="pathfinding/releases/APathfinding-Visual.jar" role="button" download>Download .jar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <link rel="stylesheet" type="text/css" href="../css/footer.css"/>
+<footer class="footer container-fluid">
+    <div class="container extraSpace">
+        <ul class="centerLinks socialIcons">
+            <li style="display:inline-block">
+                <a href="https://www.youtube.com/channel/UCDrekHmOnkptxq3gUU0IyfA"><img src="../images/icons/youtube.png"></img></a>
+            </li>
+            <li style="display:inline-block">
+                <a href="https://twitter.com/DevonCrawford13"><img src="../images/icons/twitter.png"></img></a>
+            </li>
+            <li style="display:inline-block">
+                <a href="https://www.snapchat.com/add/devoncrawfordyt"><img src="../images/icons/snapchat.png"></img></a>
+            </li>
+            <li style="display:inline-block">
+                <a href="https://www.instagram.com/devoncrawford_/"><img src="../images/icons/instagram.png"></img></a>
+            </li>
+            <li style="display:inline-block">
+                <a href="https://github.com/devoncrawford"><img src="../images/icons/github.png"></img></a>
+            </li>
+            <li style="display:inline-block">
+                <a href="https://www.linkedin.com/in/devon-crawford-463592130/"><img src="../images/icons/linkedIn.png"></img></a>
+            </li>
+            <li style="display:inline-block">
+                <a href="../contact.html"><img src="../images/icons/email.png"></img></a>
+            </li>
+        </ul>
+        <p class="footerText subP">Email me with any suggestions,
+        collaborations, or just to talk!<br>devon@devoncrawford.io</p>
+    </div>
+    <div class="bottomLinksDiv">
+        <div class="container">
+            <div class="row">
+                <div class="col-6 col-md">
+                    <a href="../index.html">Home</a>
+                </div><div class="col-md rm"><p>|</p></div>
+                <div class="col-6 col-md" >
+                    <a href="../software.1.html">Software</a>
+                </div><div class="col-md rm"><p>|</p></div>
+                <div class="col-6 col-md">
+                    <a href="../electronics.1.html">Electronics</a>
+                </div><div class="col-md rm"><p>|</p></div>
+                <div class="col-6 col-md">
+                    <a href="../films.html" style="text-align: center">Films</a>
+                </div><div class="col-md rm"><p>|</p></div>
+                <div class="col-6 col-md">
+                    <a href="../photography.html">Photography</a>
+                </div><div class="col-md rm"><p>|</p></div>
+                <div class="col-6 col-md">
+                    <a href="../contact.html">Contact</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="../scripts/footerShift.js" type="text/javascript"></script>
+    </body>
+</html>
